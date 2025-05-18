@@ -1,0 +1,97 @@
+---
+const links = [
+  { name: "About", url: "#about" },
+  { name: "Speakers", url: "#speakers" },
+  { name: "Topics", url: "#topics" },
+  { name: "Authors Guidelines", url: "#authors-guidelines" },
+  { name: "Publications", url: "#publication" },
+  { name: "Committee", url: "#committee" },
+  { name: "Important Dates", url: "#important-dates" },
+  { name: "Registration", url: "#registration" },
+];
+---
+
+<nav class="sticky top-0 z-50 border-b border-muted px-4 py-4 flex justify-between items-center bg-white">
+  <a class="text-3xl font-bold leading-none" href="#">
+    <img src="/images/logos/GSFCU Logo.png" class="h-12" alt="GSFCU Logo" />
+  </a>
+  <div class="lg:hidden">
+    <button class="navbar-burger flex items-center text-[#06202B] p-3">
+      <svg class="block h-6 w-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <title>Mobile menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </button>
+  </div>
+  <ul class="hidden lg:flex lg:gap-8">
+    {links.map((link) => (
+      <li>
+        <a
+          class="block py-2 px-3 text-[#06202B] rounded hover:text-[#077A7D]"
+          href={link.url}
+        >
+          {link.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<div class="navbar-menu relative z-50 hidden">
+  <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+  <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+    <div class="flex items-center mb-8">
+      <a class="mr-auto text-3xl font-bold leading-none" href="#">
+        <img src="/images/logos/GSFCU Logo.png" class="h-12" alt="GSFCU Logo" />
+      </a>
+      <button class="navbar-close">
+        <svg class="h-6 w-6 text-[#06202B] cursor-pointer hover:text-[#077A7D]" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div>
+      <ul>
+        {links.map((link) => (
+          <li class="mb-1">
+            <a
+              class="block p-4 text-sm font-semibold text-[#06202B] hover:bg-blue-50 hover:text-[#077A7D] rounded"
+              href={link.url}
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    burger.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        menu.forEach((m) => m.classList.toggle('hidden'));
+      });
+    });
+
+    close.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        menu.forEach((m) => m.classList.toggle('hidden'));
+      });
+    });
+
+    backdrop.forEach((bd) => {
+      bd.addEventListener('click', () => {
+        menu.forEach((m) => m.classList.toggle('hidden'));
+      });
+    });
+  });
+</script>

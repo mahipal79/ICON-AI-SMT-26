@@ -1,0 +1,137 @@
+---
+import Container from "./ui/Container.astro";
+---
+
+<style>
+  .scroll-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: auto;
+    padding-bottom: 1rem;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    min-width: 280px;
+    flex-shrink: 0;
+    background-color: white;
+    border: 2px solid #077A7D;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+<script type="text/javascript" is:inline>
+  let scrollContainer;
+
+  function startInfiniteScroll() {
+    let scrollSpeed = 0.5;
+
+    function animate() {
+      if (!scrollContainer) return;
+
+      scrollContainer.scrollLeft += scrollSpeed;
+
+      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+        scrollContainer.scrollLeft = 0;
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    scrollContainer = document.querySelector(".scroll-container");
+
+    if (scrollContainer) {
+      scrollContainer.innerHTML += scrollContainer.innerHTML;
+      startInfiniteScroll();
+    }
+  });
+</script>
+
+<div id="about" class="py-10 bg-white">
+  <Container>
+    <!-- About Conference Heading -->
+    <h2 class="text-4xl font-bold md:text-5xl mb-8" style="color: #06202B">
+      About the Conference
+    </h2>
+
+    <!-- Updated Description: No background and text matches GSFC section -->
+    <div class="mb-16">
+      <p class="w-full text-justify text-[#077A7D] text-base md:text-lg leading-relaxed">
+        The ICON-AI-SMT'25 conference at GSFC University brings together leading experts,
+        researchers, and practitioners from diverse fields to explore the transformative
+        impact of Artificial Intelligence. This international conference fosters interdisciplinary
+        collaboration and innovation by integrating AI into science, management, and technology.
+        Engage in cutting-edge presentations, discussions, and networking opportunities
+        to drive advancements and shape the future.
+      </p>
+    </div>
+
+    <!-- Horizontal Auto-Scrolling Carousel -->
+    <div class="scroll-container">
+      <div class="card">
+        <h3 class="text-xl font-semibold text-[#06202B] mb-2">AI in Science</h3>
+        <p class="text-[#077A7D] text-sm">
+          Explore AI in data-driven discovery, healthcare diagnostics, and environmental modeling.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-semibold text-[#06202B] mb-2">AI in Management</h3>
+        <p class="text-[#077A7D] text-sm">
+          Learn how AI empowers strategic decision-making, automation, and business intelligence.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-semibold text-[#06202B] mb-2">AI in Technology</h3>
+        <p class="text-[#077A7D] text-sm">
+          Dive into AI algorithms, robotics, IoT, and smart system innovations.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-semibold text-[#06202B] mb-2">Publication Info</h3>
+        <p class="text-[#077A7D] text-sm">
+          Proceedings to be published in Springer CCIS (SCOPUS indexed). Top papers may go to journals.
+        </p>
+      </div>
+    </div>
+
+    <!-- GSFC University Section -->
+    <h2 class="text-4xl font-bold md:text-5xl my-10" style="color: #06202B">
+      About GSFC University
+    </h2>
+    <div class="flex flex-col md:flex-row gap-8 mb-16">
+      <p class="w-full md:w-3/5 text-justify text-[#077A7D] text-base md:text-lg leading-relaxed">
+        GSFC University, recognized under the Gujarat Private University Act 2014, is backed by the
+        legacy of Gujarat State Fertilizers and Chemicals Ltd. The university nurtures knowledge with
+        strong industrial collaboration, hands-on training, and a commitment to sustainable innovation.
+        Rooted in the philosophy of "Buddhi Gyanen Shudhayanti", it fosters holistic growth through
+        intellect and compassion.
+      </p>
+      <iframe
+        class="w-full md:w-2/5 aspect-video rounded-lg"
+        src="https://www.youtube.com/embed/00RpFOKLdpk?si=0o4fHrbRqu7Tiof6"
+        title="GSFC University Intro"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </Container>
+</div>

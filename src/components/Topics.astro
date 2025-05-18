@@ -1,0 +1,92 @@
+---
+import Container from "./ui/Container.astro";
+
+const TRACK_ONE = [
+  "Artificial Intelligence",
+  "Deep Learning",
+  "Machine Learning",
+  "Video, Speech & Text Processing using AI",
+];
+
+const TRACK_TWO = [
+  "Data Analytics",
+  "AI in Pharmaceutical Manufacturing",
+  "Predicting Catalyst Performance Using Machine Learning",
+  "AI Applications in Early Disease Detection and Diagnosis",
+  "AI in Nano Technology",
+];
+
+const TRACK_THREE = [
+  "Ethics in AI",
+  "AI in Business Analytics",
+  "AI for Optimization and Automation",
+  "AI in Decision  Making Strategic and Planning"
+];
+---
+
+<section id="topics" class="text-center space-y-4">
+  <Container>
+    <h1 class="text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">
+      Call For Papers
+    </h1>
+
+    <p class="my-8">
+      We warmly invite prospective authors to submit high-quality research papers featuring original, unpublished findings from conceptual, constructive, empirical, experimental, or theoretical work across all areas of Intelligent Computing and AI Systems, AI in Scientific Research and Innovation and AI Powered Business Intelligence. The topics covered include the following. (The list of the topics within each track is only indicative and not exhaustive.)
+    </p>
+
+    <div
+      class="grid grid-cols-1 grid-rows-1 gap-8 my-16 justify-center md:grid-cols-3 md:grid-rows-1">
+      <div>
+        <h3 class="text-2xl font-bold text-[#2563eb] text-center underline">
+          TRACK 1
+        </h3>
+        <h3 class="text-2xl font-bold text-[#2563eb]">
+          Intelligent Computing and AI System
+        </h3>
+        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+          {
+            TRACK_ONE.map((topic) => (
+              <li class="py-2 sm:py-3 ">
+                <div class="flex items-center space-x-4 text-left">{topic}</div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-[#65a30d] text-center underline">
+          TRACK 2
+        </h3>
+        <h3 class="text-2xl font-bold text-[#65a30d]">
+          AI in Scientific Research and Innovation
+        </h3>
+        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+          {
+            TRACK_TWO.map((topic) => (
+              <li class="py-2 sm:py-3 ">
+                <div class="flex items-center space-x-4 text-left">{topic}</div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-[#ca8a04] text-center underline">
+          TRACK 3
+        </h3>
+        <h3 class="text-2xl font-bold text-[#ca8a04]">
+          AI Powered Business Intelligence
+        </h3>
+        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+          {
+            TRACK_THREE.map((topic) => (
+              <li class="py-2 sm:py-3 ">
+                <div class="flex items-center space-x-4 text-left">{topic}</div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </Container>
+</section>
