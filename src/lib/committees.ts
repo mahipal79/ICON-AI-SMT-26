@@ -12,10 +12,6 @@ export const CHIEF_PATRON: Array<Member> = [
 
 export const ADVISORY_COMMITTEE: Array<Member> = [
     {
-        name: "Prof. (DR.) Manoj Choudhary",
-        position: "Vice Chancellor, Gati Shakti Vishwavidyalaya (GSV), Vadodara",
-    },
-    {
         name: "Prof. Karuna Jain",
         position: "Professor, IIT Bombay",
     },
@@ -33,15 +29,19 @@ export const ADVISORY_COMMITTEE: Array<Member> = [
     },
     {
         name: "Dr. Aloknath De",
-        position: "Founder & CEO - TechCrafter.cps, Adjunct Prof - IISc, CTO & CVP (Retd.) - Samsung"
+        position: "Founder & CEO - TechCrafter.cps, Adjunct Prof - IISc, CTO & CVP (Retd.) - Samsung",
+    },
+    {
+        name: "Mr. Vineet Tripathi",
+        position: "TCS"
+    },
+    {
+        name: "Mr. Saurabh Tiwari",
+        position: "Senior Principal Engineer , Intel Coorporation, India",
     },
     {
         name: "Mr. Ramesh B. Panchal",
         position: "Director (Administration), GSFC University, Vadodara",
-    },
-    {
-        name: "Mr. Bimal B Bhayani",
-        position: "CEO - GUIITAR Council, GSFC University, Vadodara",
     },
     {
         name: "Dr. Nishith Parikh",
@@ -50,6 +50,10 @@ export const ADVISORY_COMMITTEE: Array<Member> = [
     {
         name: "Dr. K. Santhosh Kumar",
         position: "Dean, Student Activities and Alumni Interaction Cell (DOST-AI), GSFC University, Vadodara",
+    },
+    {
+        name: "Dr. Ranjita Banerjee",
+        position: "Dean, School of Manegement and Liberal Arts(SOM& LA),GSFC University, Vadodara",
     },
 ];
 
@@ -61,22 +65,6 @@ export const TECHNICAL_PROGRAM_COMMITTEE: Array<Member> = [
     {
         name: "Prof. Xiaohong W. Gao",
         position: "Middlesex University, London, UK"
-    },
-    {
-        name: "Prof. Anand Nayyar",
-        position: "Assistant Professor, Scientist, Vice President (Research), Director - Intelligent Systems and IoT Laboratory, Duy Tan University, Vietnam"
-    },
-    {
-        name: "Prof. Kemal Polat",
-        position: "Abant Izzet Baysal University, Turkey"
-    },
-    {
-        name: "Prof. Şaban Öztürk",
-        position: "Bilkent University, Turkey"
-    },
-    {
-        name: "Prof. Vladan Devedzic",
-        position: "University of Belgrade, Serbia"
     },
     {
         name: "Prof. Amitabh Mishra",
@@ -91,16 +79,12 @@ export const TECHNICAL_PROGRAM_COMMITTEE: Array<Member> = [
         position: "Research Fellow, Victoria University, Australia"
     },
     {
-        name: "Prof. Ram Bilas Pachori",
-        position: "IIT Indore, India"
-    },
-    {
         name: "Prof. Somitra Kumar Sanadhya",
         position: "IIT Jodhpur, India"
     },
     {
         name: "Prof. K. S. Kasiviswanathan",
-        position: "Associate Professor, IIT Roorkee, India",
+        position: "Associate Professor, IIT Roorkee, India"
     },
     {
         name: "Prof. Sarat Kumar Patra",
@@ -120,7 +104,7 @@ export const TECHNICAL_PROGRAM_COMMITTEE: Array<Member> = [
     },
     {
         name: "Mr. Shenson Joseph",
-        position: "Vice President Data Engineering, JPMorgan Chase & Co., Texas, USA"
+        position: "Vice President Data Engineering, JPMorgan Chase & Co., Texas, USA",
     },
     {
         name: "Mr. Anuj Kumar Sareen",
@@ -129,6 +113,14 @@ export const TECHNICAL_PROGRAM_COMMITTEE: Array<Member> = [
     {
         name: "Prof. Maulika Patel",
         position: "Head, GCET, VV Vidhyanagar, Gujarat, India"
+    },
+    {
+        name: "Mr. Mahesh Yadav,",
+        position: "Product Manager and Developer, Google Gen AI, USA"
+    },
+    {
+        name: "Ms. Shalmali Patil",
+        position: "Business Intelligence Engineer at Amazon, USA"
     },
 ];
 
@@ -162,6 +154,7 @@ export const CO_CONVENORS: Array<Member> = [
 ];
 
 export const ORGANIZING_COMMITTEE: Array<Member> = [
+    /*
     {
         name: "Mr. Mahesh Barot",
         position: "Dy. Director - Administration",
@@ -218,9 +211,11 @@ export const ORGANIZING_COMMITTEE: Array<Member> = [
         name: "Ms. Sachiyanka Shrivastava",
         position: "Dy. Manager - Marketing and PR",
     },
+    */
 ];
 
 export const EDITORIAL_TEAM: Array<Member> = [
+    /*
     {
         name: "Prof. G. R Sinha",
         position: "Provost, GSFC University, Vadodara, India",
@@ -241,6 +236,7 @@ export const EDITORIAL_TEAM: Array<Member> = [
         name: "Prof. C P Fan",
         position: "National Chung Hsing University, Taiwan",
     }
+    */
 ];
 
 export const WEB_COMMITTEE: Array<Member> = [
@@ -249,15 +245,11 @@ export const WEB_COMMITTEE: Array<Member> = [
         position: "GSFC University, Vadodara, India",
     },
     {
-        name: "Mr. Nayan Radadiya",
+        name: "Ms. Krishna Viradiya",
         position: "GSFC University, Vadodara, India",
     },
     {
-        name: "Ms. Yashasvi Virani",
+        name: "Mr. Mahipal Chauhan",
         position: "GSFC University, Vadodara, India",
     },
-    {
-        name: "Mr. Pranav Kalambe",
-        position: "GSFC University, Vadodara, India",
-    }
 ];
