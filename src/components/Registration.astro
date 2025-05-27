@@ -7,34 +7,29 @@ import Link from "./ui/Link.astro";
   <section id="registration" class="text-center space-y-10 relative">
     <div
       aria-hidden="true"
-      class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -z-50 -space-x-52 opacity-20 dark:opacity-20"
+      class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -z-50 -space-x-52 opacity-20"
     >
-      <div
-        class="blur-[106px] h-56 bg-gradient-to-br from-info to-purple-400 dark:from-blue-700"
-      >
-      </div>
-      <div
-        class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"
-      >
-      </div>
+      <div class="blur-[106px] h-56 bg-gradient-to-br from-[#077A7D] to-purple-400"></div>
+      <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300"></div>
     </div>
-    <h1 class="text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">
+
+    <h1 class="text-4xl font-bold text-[#06202B] md:text-5xl">
       Registration
     </h1>
 
     <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
-      <table class="table-auto rounded-lg overflow-hidden">
+      <table class="table-auto rounded-lg overflow-hidden text-[#06202B]">
         <thead>
           <tr>
-            <th class="px-4 py-2 bg-info text-white">Categories</th>
-            <th class="px-4 py-2 bg-info text-white">Fees*</th>
+            <th class="px-4 py-2 bg-[#077A7D] text-[#E7F7F7]">Categories</th>
+            <th class="px-4 py-2 bg-[#077A7D] text-[#E7F7F7]">Fees*</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="border px-4 py-2"
-              >Students/Research Scholars/ Academicians</td
-            >
+            <td class="border px-4 py-2">
+              Students/Research Scholars/ Academicians
+            </td>
             <td class="border px-4 py-2">INR 7,000</td>
           </tr>
           <tr>
@@ -42,50 +37,50 @@ import Link from "./ui/Link.astro";
             <td class="border px-4 py-2">INR 10,000</td>
           </tr>
           <tr>
-            <td class="border px-4 py-2"
-              >Authors, outside India (by Affiliation)</td
-            >
+            <td class="border px-4 py-2">
+              Authors, outside India (by Affiliation)
+            </td>
             <td class="border px-4 py-2">USD 250</td>
           </tr>
           <tr>
-            <td class="border px-4 py-2"
-              >Attendee / Co-author</td
-            >
+            <td class="border px-4 py-2">Attendee / Co-author</td>
             <td class="border px-4 py-2">INR 1,000</td>
           </tr>
           <tr>
-            <td class="border px-4 py-2"
-              >Attendee / Co-author, outside India (by Affiliation)</td
-            >
+            <td class="border px-4 py-2">
+              Attendee / Co-author, outside India (by Affiliation)
+            </td>
             <td class="border px-4 py-2">USD 150</td>
           </tr>
-            <td class="border px-4 py-2" colspan="2">
+          <tr>
+            <td class="border px-4 py-2 text-center" colspan="2">
               *All the above fees are inclusive of 18% GST
             </td>
           </tr>
         </tbody>
       </table>
 
-      <!-- QR image -->
-      <!-- <div class="flex flex-col items-center justify-center space-y-10">
+      <!-- Optional QR Code Section
+      <div class="flex flex-col items-center justify-center space-y-10">
         <a href="https://www.gsfcuni.edu.in/" target="_blank">
           <img src="/images/QRCode.png" alt="QR Code" class="w-56 rounded-lg" />
-          <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+          <p class="text-center text-sm text-[#06202B]">
             Scan the QR code for registration
           </p>
         </a>
-      </div> -->
+      </div>
+      -->
     </div>
 
-<!-- 
-    <h1 class="text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">
+    <!-- Optional Registration Link Section
+    <h1 class="text-4xl font-bold text-[#06202B] md:text-5xl">
       Attendee Registration Link
     </h1>
-    <div class="text-center text-md md:text-lg">
-      <Link href="https://forms.gle/DdY3taCH33thQveFA"
-        >https://forms.gle/DdY3taCH33thQveFA</Link
-      >
+    <div class="text-center text-md md:text-lg text-[#06202B]">
+      <Link href="https://forms.gle/DdY3taCH33thQveFA" class="text-[#077A7D]">
+        https://forms.gle/DdY3taCH33thQveFA
+      </Link>
     </div>
--->
+    -->
   </section>
 </Container>

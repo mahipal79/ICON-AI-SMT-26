@@ -2,25 +2,27 @@
 import Container from "./ui/Container.astro";
 
 const TRACK_ONE = [
-  "Artificial Intelligence",
-  "Deep Learning",
-  "Machine Learning",
-  "Video, Speech & Text Processing using AI",
+  "Deep Learning Architectures (CNN, RNN, Transformers)",
+  "Reinforcement Learning and Decision-Making Systems",
+  "Explainable AI and Model Interpretability",
+  "AI for Predictive Analytics and Forecasting",
+  "Generative AI (GANs, Diffusion Models)",
+  "AI in Real-Time and Embedded Systems",
+  "Transfer Learning and Few-Shot Learning",
+  "Federated and Privacy-Preserving Machine Learning",
+  "Applications of AI and ML Techniques",
 ];
 
 const TRACK_TWO = [
-  "Data Analytics",
-  "AI in Pharmaceutical Manufacturing",
-  "Predicting Catalyst Performance Using Machine Learning",
-  "AI Applications in Early Disease Detection and Diagnosis",
-  "AI in Nano Technology",
-];
-
-const TRACK_THREE = [
-  "Ethics in AI",
-  "AI in Business Analytics",
-  "AI for Optimization and Automation",
-  "AI in Decision  Making Strategic and Planning"
+  "AI for Medical Imaging and Disease Diagnosis",
+  "Predictive Modeling for Public Health and Epidemics",
+  "IoT and Sensor-Based Health Monitoring Systems",
+  "Smart Environmental Monitoring (Air, Water, Soil)",
+  "Machine Learning for Climate Change and Weather Prediction",
+  "Remote Sensing and Image Analysis for Agriculture",
+  "AI in Waste Management and Sustainable Practices",
+  "Edge and Cloud Computing in Smart Healthcare Systems",
+  "AI in Biomedical Image Processing and Mental Healthcare",
 ];
 ---
 
@@ -30,58 +32,45 @@ const TRACK_THREE = [
       Call For Papers
     </h1>
 
-    <p class="my-8">
-      We warmly invite prospective authors to submit high-quality research papers featuring original, unpublished findings from conceptual, constructive, empirical, experimental, or theoretical work across all areas of Intelligent Computing and AI Systems, AI in Scientific Research and Innovation and AI Powered Business Intelligence. The topics covered include the following. (The list of the topics within each track is only indicative and not exhaustive.)
+    <p class="my-8 text-[#06202b]">
+      We invite researchers and professionals to contribute their original work
+      that advances the field of AI and intelligent systems. This year's
+      conference will focus on cutting-edge developments in Artificial
+      Intelligence, Machine Learning applications, and intelligent systems for
+      healthcare and environmental sustainability.
     </p>
 
-    <div
-      class="grid grid-cols-1 grid-rows-1 gap-8 my-16 justify-center md:grid-cols-3 md:grid-rows-1">
+    <div class="grid grid-cols-1 gap-8 my-16 md:grid-cols-2">
       <div>
         <h3 class="text-2xl font-bold text-[#2563eb] text-center underline">
           TRACK 1
         </h3>
         <h3 class="text-2xl font-bold text-[#2563eb]">
-          Intelligent Computing and AI System
+          Artificial Intelligence, Machine Learning and Applications
         </h3>
-        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+        <ul class="divide-y divide-gray-200 dark:divide-gray-700 text-left">
           {
             TRACK_ONE.map((topic) => (
-              <li class="py-2 sm:py-3 ">
-                <div class="flex items-center space-x-4 text-left">{topic}</div>
+              <li class="py-2 sm:py-3">
+                <div class="flex items-center space-x-4">{topic}</div>
               </li>
             ))
           }
         </ul>
       </div>
+
       <div>
         <h3 class="text-2xl font-bold text-[#65a30d] text-center underline">
           TRACK 2
         </h3>
         <h3 class="text-2xl font-bold text-[#65a30d]">
-          AI in Scientific Research and Innovation
+          Intelligent Systems for Healthcare and Environmental Sustainability
         </h3>
-        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+        <ul class="divide-y divide-gray-200 dark:divide-gray-700 text-left">
           {
             TRACK_TWO.map((topic) => (
-              <li class="py-2 sm:py-3 ">
-                <div class="flex items-center space-x-4 text-left">{topic}</div>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-2xl font-bold text-[#ca8a04] text-center underline">
-          TRACK 3
-        </h3>
-        <h3 class="text-2xl font-bold text-[#ca8a04]">
-          AI Powered Business Intelligence
-        </h3>
-        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
-          {
-            TRACK_THREE.map((topic) => (
-              <li class="py-2 sm:py-3 ">
-                <div class="flex items-center space-x-4 text-left">{topic}</div>
+              <li class="py-2 sm:py-3">
+                <div class="flex items-center space-x-4">{topic}</div>
               </li>
             ))
           }
