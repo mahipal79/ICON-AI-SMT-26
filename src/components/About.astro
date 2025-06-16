@@ -29,32 +29,36 @@ import Container from "./ui/Container.astro";
   .card:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
+
+  .info-block {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .info-block {
+      width: 50%;
+    }
+  }
 </style>
 
 <script type="text/javascript" is:inline>
   let scrollContainer;
-
   function startInfiniteScroll() {
     let scrollSpeed = 0.5;
-
     function animate() {
       if (!scrollContainer) return;
-
       scrollContainer.scrollLeft += scrollSpeed;
-
       if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
         scrollContainer.scrollLeft = 0;
       }
-
       requestAnimationFrame(animate);
     }
-
     requestAnimationFrame(animate);
   }
 
   window.addEventListener("DOMContentLoaded", () => {
     scrollContainer = document.querySelector(".scroll-container");
-
     if (scrollContainer) {
       scrollContainer.innerHTML += scrollContainer.innerHTML;
       startInfiniteScroll();
@@ -64,58 +68,70 @@ import Container from "./ui/Container.astro";
 
 <div id="about" class="py-10 bg-white">
   <Container>
-    <!-- About Conference Heading -->
-    <h2 class="text-4xl font-bold md:text-5xl mb-8" style="color: #06202B">
+    <!-- About the Conference -->
+    <h2 class="text-center text-4xl font-bold md:text-5xl mb-8 text-[#06202B]">
       About the Conference
     </h2>
 
-    <!-- Updated Description: No background and text matches GSFC section -->
-    <div class="mb-16">
+    <div class="mb-10">
       <p class="w-full text-justify text-[#077A7D] text-base md:text-lg leading-relaxed">
-        The ICMC-2026 conference at GSFC University brings together leading experts,
-        researchers, and practitioners from diverse fields to explore the transformative
-        impact of Artificial Intelligence. This international conference fosters interdisciplinary
-        collaboration and innovation by integrating AI into science, management, and technology.
-        Engage in cutting-edge presentations, discussions, and networking opportunities
-        to drive advancements and shape the future.
+        The <strong>2nd International Conference on Intelligent Computing for Multidisciplinary Challenges (ICMC-2026)</strong> at GSFC University brings together leading researchers, academicians, and industry professionals to explore the frontiers of Artificial Intelligence, Machine Learning, and their diverse applications. This event aims to foster innovation and collaboration across disciplines by addressing real-world challenges through cutting-edge AI technologies. <br /><br />
+        ICMC-2026 will provide a vibrant platform for sharing breakthroughs, engaging in insightful discussions, and shaping the future of intelligent systems across sectors such as healthcare, environmental sustainability, predictive analytics, and decision support. <br /><br />
+        The proceedings of the conference will be submitted for publication in the <strong>Communications in Computer and Information Science (CCIS)</strong> series of <strong>Springer</strong> [SCOPUS Indexed] <em>(proposal submitted)</em>.
       </p>
     </div>
 
-    <!-- Horizontal Auto-Scrolling Carousel -->
-    <div class="scroll-container">
+    <!-- WHEN & WHERE (Minimal Version) -->
+    <div class="flex flex-col md:flex-row gap-8 mb-16 text-[#077A7D]">
+      <div class="info-block">
+        <h3 class="text-xl font-bold text-black mb-2">WHEN</h3>
+        <p class="text-base">
+          Wednesday – Thursday<br />
+          <strong>February 19–20, 2026</strong>
+        </p>
+      </div>
+      <div class="info-block">
+        <h3 class="text-xl font-bold text-black mb-2">WHERE</h3>
+        <p class="text-base">
+        The Conference will be hosted in Hybrid Mode
+        <br>
+(Online as well as On-Site).
+          <br />
+          <strong>GSFC University, Vadodara, Gujarat, India</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- Auto-Scrolling Cards -->
+    <div class="scroll-container mb-20">
       <div class="card">
         <h3 class="text-xl font-semibold text-[#06202B] mb-2">AI in Science</h3>
         <p class="text-[#077A7D] text-sm">
           Explore AI in data-driven discovery, healthcare diagnostics, and environmental modeling.
         </p>
       </div>
-
       <div class="card">
         <h3 class="text-xl font-semibold text-[#06202B] mb-2">AI in Management</h3>
         <p class="text-[#077A7D] text-sm">
           Learn how AI empowers strategic decision-making, automation, and business intelligence.
         </p>
       </div>
-
       <div class="card">
         <h3 class="text-xl font-semibold text-[#06202B] mb-2">AI in Technology</h3>
         <p class="text-[#077A7D] text-sm">
           Dive into AI algorithms, robotics, IoT, and smart system innovations.
         </p>
       </div>
-
       <div class="card">
         <h3 class="text-xl font-semibold text-[#06202B] mb-2">Publication Info</h3>
         <p class="text-[#077A7D] text-sm">
-          Proceedings to be published in Springer CCIS (SCOPUS indexed). Top papers may go to journals.
+          Proceedings to be submitted to Springer CCIS (SCOPUS indexed). Top papers may be recommended to journals.
         </p>
       </div>
     </div>
 
-    <!-- GSFC University Section -->
-    <h2 class="text-4xl font-bold md:text-5xl my-10" style="color: #06202B">
-      About GSFC University
-    </h2>
+    <!-- About GSFC University -->
+    <h2 class="text-center text-4xl font-bold md:text-5xl mb-8 text-[#06202B]">About GSFC University</h2>
     <div class="flex flex-col md:flex-row gap-8 mb-16">
       <p class="w-full md:w-3/5 text-justify text-[#077A7D] text-base md:text-lg leading-relaxed">
         GSFC University, recognized under the Gujarat Private University Act 2014, is backed by the
