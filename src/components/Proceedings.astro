@@ -1,38 +1,142 @@
 ---
 import Container from "./ui/Container.astro";
-import Link from "./ui/Link.astro";
 ---
 
 <section id="proceedings">
   <Container>
+    <!-- Title -->
     <h1 class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl mb-10">
-      Conference Proceedings
+      Past Conference
     </h1>
 
-    <div class="flex flex-col md:flex-row justify-center gap-6">
-      <!-- Box 1 -->
-      <a
-        href="https://example.com/proceedings.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="flex-1 text-center bg-[#06202B] text-[#E7F7F7] font-semibold text-lg px-6 py-5 rounded-lg shadow-md hover:bg-[#077A7D] transition"
-      >
-        Conference Proceedings
-      </a>
+    <!-- Springer Link -->
+    <p class="text-center text-sky-500 italic text-lg mb-8">
+      https://link.springer.com/conference/icon-ai-smt
+    </p>
 
-      <!-- Box 2 -->
-      <a
-        href="https://example.com/conference-report.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="flex-1 text-center bg-[#06202B] text-[#E7F7F7] font-semibold text-lg px-6 py-5 rounded-lg shadow-md hover:bg-[#077A7D] transition"
-      >
-        Conference Report
-      </a>
+    <!-- Conference Info Section -->
+    <div class="flex flex-col md:flex-row justify-center items-start gap-10">
+      <!-- Book Cover -->
+      <div class="w-full md:w-1/3 flex justify-center">
+        <img
+          src="/conference-book-cover.png"
+          alt="ICON-AI-SMT'25 Proceedings Cover"
+          class="max-w-xs rounded-lg shadow-md"
+        />
+      </div>
+
+      <!-- Details -->
+      <div class="w-full md:w-2/3">
+        <h2 class="text-xl font-bold text-black dark:text-white mb-2">ICON-AI-SMT'25</h2>
+        <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+          <strong>Communications in Computer and Information Science (CCIS)</strong> Volume 1825<br/>
+          <strong>Intelligent Computing and Smart Technologies</strong><br/>
+          First International Conference, ICON-AI-SMT 2025, Gujarat, India, December 15–16, 2025
+        </p>
+
+        <h3 class="mt-4 font-semibold text-gray-800 dark:text-white">Proceedings Editors</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Dr. Example Editor, Dr. Second Editor, Dr. Third Editor
+        </p>
+
+        <a
+          href="https://link.springer.com/book/10.1007/978-3-030-xxxx-x"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sky-500 italic mt-2 inline-block"
+        >
+          https://link.springer.com/book/10.1007/978-3-030-xxxx-x
+        </a>
+      </div>
     </div>
 
-    <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">
-      *Links will be updated once finalized.
-    </p>
+    <!-- Visitor Section -->
+    <div class="mt-16 bg-[#06202B] text-white p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-semibold text-center mb-4 border-b border-gray-600 pb-2">
+        VISITORS
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-y-4 text-sm font-medium text-center">
+        <!-- Loop of countries -->
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/in.png" alt="IN" class="w-5 h-auto rounded-sm" /> IN – 32,580
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/us.png" alt="US" class="w-5 h-auto rounded-sm" /> US – 4,181
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/sg.png" alt="SG" class="w-5 h-auto rounded-sm" /> SG – 533
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/bd.png" alt="BD" class="w-5 h-auto rounded-sm" /> BD – 511
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/nl.png" alt="NL" class="w-5 h-auto rounded-sm" /> NL – 484
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/gb.png" alt="GB" class="w-5 h-auto rounded-sm" /> GB – 347
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/fi.png" alt="FI" class="w-5 h-auto rounded-sm" /> FI – 345
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/fr.png" alt="FR" class="w-5 h-auto rounded-sm" /> FR – 339
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/kr.png" alt="KR" class="w-5 h-auto rounded-sm" /> KR – 324
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/ca.png" alt="CA" class="w-5 h-auto rounded-sm" /> CA – 299
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/ma.png" alt="MA" class="w-5 h-auto rounded-sm" /> MA – 269
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/ru.png" alt="RU" class="w-5 h-auto rounded-sm" /> RU – 247
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/au.png" alt="AU" class="w-5 h-auto rounded-sm" /> AU – 240
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/cn.png" alt="CN" class="w-5 h-auto rounded-sm" /> CN – 207
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/jp.png" alt="JP" class="w-5 h-auto rounded-sm" /> JP – 180
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/at.png" alt="AT" class="w-5 h-auto rounded-sm" /> AT – 150
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/de.png" alt="DE" class="w-5 h-auto rounded-sm" /> DE – 148
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/pl.png" alt="PL" class="w-5 h-auto rounded-sm" /> PL – 140
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/no.png" alt="NO" class="w-5 h-auto rounded-sm" /> NO – 134
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/tr.png" alt="TR" class="w-5 h-auto rounded-sm" /> TR – 108
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/ie.png" alt="IE" class="w-5 h-auto rounded-sm" /> IE – 101
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/vn.png" alt="VN" class="w-5 h-auto rounded-sm" /> VN – 96
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/za.png" alt="ZA" class="w-5 h-auto rounded-sm" /> ZA – 90
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/pe.png" alt="PE" class="w-5 h-auto rounded-sm" /> PE – 89
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <img src="https://flagcdn.com/24x18/br.png" alt="BR" class="w-5 h-auto rounded-sm" /> BR – 77
+        </div>
+      </div>
+
+      <!-- Pageviews -->
+      <p class="mt-6 text-center text-gray-400 text-sm">Pageviews: 64,734</p>
+    </div>
   </Container>
 </section>
