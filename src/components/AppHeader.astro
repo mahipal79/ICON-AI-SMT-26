@@ -12,87 +12,86 @@ const links = [
 ];
 ---
 
-<nav class="sticky top-0 z-50 border-b border-muted px-4 py-4 flex justify-between items-center bg-white">
-  <a class="text-3xl font-bold leading-none" href="#">
-    <img src="/images/logos/GSFCU Logo.png" class="h-12" alt="GSFCU Logo" />
-  </a>
-  <div class="lg:hidden">
-    <button class="navbar-burger flex items-center text-[#06202B] p-3">
-      <svg class="block h-6 w-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <title>Mobile menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-      </svg>
-    </button>
-  </div>
-  <ul class="hidden lg:flex lg:gap-8">
-    {links.map((link) => (
-      <li>
-        <a
-          class="block py-2 px-3 text-[#06202B] rounded hover:text-[#077A7D]"
-          href={link.url}
-        >
-          {link.name}
-        </a>
-      </li>
-    ))}
-  </ul>
-</nav>
-
-<div class="navbar-menu relative z-50 hidden">
-  <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-  <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-    <div class="flex items-center mb-8">
-      <a class="mr-auto text-3xl font-bold leading-none" href="#">
-        <img src="/images/logos/GSFCU Logo.png" class="h-12" alt="GSFCU Logo" />
+<nav class="bg-white sticky top-0 z-50 border-b border-gray-200 shadow-sm">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <a href="#" class="flex items-center">
+        <img src="/images/logos/GSFCU Logo.png" alt="GSFCU Logo" class="h-12 w-auto" />
       </a>
-      <button class="navbar-close">
-        <svg class="h-6 w-6 text-[#06202B] cursor-pointer hover:text-[#077A7D]" xmlns="http://www.w3.org/2000/svg" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-    </div>
-    <div>
-      <ul>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden lg:flex gap-8 text-[#06202B] text-sm font-medium">
         {links.map((link) => (
-          <li class="mb-1">
+          <li>
             <a
-              class="block p-4 text-sm font-semibold text-[#06202B] hover:bg-blue-50 hover:text-[#077A7D] rounded"
               href={link.url}
+              class="hover:text-[#077A7D] transition-colors duration-200"
             >
               {link.name}
             </a>
           </li>
         ))}
       </ul>
+
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden">
+        <button class="navbar-burger text-[#06202B] focus:outline-none">
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 20 20">
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
     </div>
-  </nav>
-</div>
+  </div>
 
+  <!-- Mobile Menu Drawer -->
+  <div class="navbar-menu fixed inset-0 z-50 bg-white transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+    <div class="flex justify-between items-center px-6 py-4 border-b">
+      <a href="#">
+        <img src="/images/logos/GSFCU Logo.png" class="h-10" alt="GSFCU Logo" />
+      </a>
+      <button class="navbar-close text-[#06202B]">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <ul class="px-6 py-4 space-y-2 text-sm font-medium text-[#06202B]">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.url}
+            class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#077A7D] transition"
+          >
+            {link.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<!-- Script for mobile menu toggle -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const burger = document.querySelectorAll('.navbar-burger');
-    const menu = document.querySelectorAll('.navbar-menu');
-    const close = document.querySelectorAll('.navbar-close');
-    const backdrop = document.querySelectorAll('.navbar-backdrop');
+  document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.navbar-burger');
+    const menu = document.querySelector('.navbar-menu');
+    const close = document.querySelector('.navbar-close');
 
-    burger.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        menu.forEach((m) => m.classList.toggle('hidden'));
-      });
+    burger.addEventListener('click', () => {
+      menu.classList.remove('-translate-x-full');
     });
 
-    close.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        menu.forEach((m) => m.classList.toggle('hidden'));
-      });
+    close.addEventListener('click', () => {
+      menu.classList.add('-translate-x-full');
     });
 
-    backdrop.forEach((bd) => {
-      bd.addEventListener('click', () => {
-        menu.forEach((m) => m.classList.toggle('hidden'));
-      });
+    // Optional: Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !burger.contains(e.target)) {
+        menu.classList.add('-translate-x-full');
+      }
     });
   });
 </script>
